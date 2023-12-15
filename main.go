@@ -7,40 +7,17 @@ import (
 
 func main() {
 	// Define a permutation key as a mapping of characters
-	// I used an Enigma rotor
 	key := map[rune]rune{
-		'a': 'e',
-		'b': 'k',
-		'c': 'm',
-		'd': 'f',
-		'e': 'l',
-		'f': 'g',
-		'g': 'd',
-		'h': 'q',
-		'i': 'v',
-		'j': 'z',
-		'k': 'n',
-		'l': 't',
-		'm': 'o',
-		'n': 'w',
-		'o': 'y',
-		'p': 'h',
-		'q': 'x',
-		'r': 'u',
-		's': 's',
-		't': 'p',
-		'u': 'a',
-		'v': 'i',
-		'w': 'b',
-		'x': 'r',
-		'y': 'c',
-		'z': 'j',
+		'a': 'e', 'b': 'k', 'c': 'm', 'd': 'f', 'e': 'l', 'f': 'g',
+		'g': 'd', 'h': 'q', 'i': 'v', 'j': 'z', 'k': 'n', 'l': 't',
+		'm': 'o', 'n': 'w', 'o': 'y', 'p': 'h', 'q': 'x', 'r': 'u',
+		's': 's', 't': 'p', 'u': 'a', 'v': 'i', 'w': 'b', 'x': 'r',
+		'y': 'c', 'z': 'j',
 	}
 
 	plaintext := "hello world"
 	ciphertext := encrypt(plaintext, key)
 	decryptedText := decrypt(ciphertext, key)
-
 	fmt.Println("Plaintext: ", plaintext)
 	fmt.Println("Ciphertext: ", ciphertext)
 	fmt.Println("Decrypted text: ", decryptedText)
